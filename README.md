@@ -28,15 +28,10 @@
 コマンドプロンプトで```ssh -i "~/Downloads/```を入力するが実行はまだしない。AWSのマネジメントコンソールで接続したいEC2から「接続」をクリックし、「SSHクライアント」タブをクリックすると 例：```ssh -i "KrrXp2bKjU3chCVq.pem" ec2-user@ec2-44-212-7-64.compute-1.amazonaws.com``` と記載されているので```KrrXp2bKjU3chCVq.pem" ec2-user@ec2-44-212-7-64.compute-1.amazonaws.com```の部分だけコピーし、さっき入力した```ssh -i "~/Downloads/```とつなげた状態である```ssh -i "~/Downloads/KrrXp2bKjU3chCVq.pem" ec2-user@ec2-44-212-7-64.compute-1.amazonaws.com```を実行する。
 
 # EC2からRDSに接続と正常に接続できているかの確認
-1. AWSのマネジメントコンソールで接続したいRDSを選択し、そのRDSの詳細情報が書かれたページに行き、一番下までスクロールすると以下のように「接続されたコンピューティングリソース」があるので、「EC2接続のセットアップ」をクリックする。画面が遷移したら接続したいEC2インスタンスを選択し、「続行」→「Set up」をクリックする。
-
-![スクリーンショット 2023-09-15 153729](https://github.com/Hidetaka-Konishi/Raise_AWS_4/assets/142459457/f8f1b814-2544-4f9c-84da-67a2a21147e1)
-
-
-2. コマンドプロンプトを開き、上記の「sshでEC2に接続」の手順に沿ってEC2に接続する。
-3. 接続するRDSがMySQLで、EC2インスタンスにMySQLがインストールされていない場合は、```sudo yum install mysql```を実行してインストールを行う。
-4. ```mysql -h [RDSのエンドポイント] -P 3306 -u [RDSのユーザー名(デフォルトはadmin)] -p```を実行する。
-5. パスワードが求められるのでRDSインスタンスを作成するときに設定したパスワードを入力することで以下のように正常に接続していることを確認できる。
+1. PowerShellを開き、上記の「sshでEC2に接続」の手順に沿ってEC2に接続する。
+2. 接続するRDSがMySQLで、EC2インスタンスにMySQLがインストールされていない場合は、```sudo yum install mysql```を実行してインストールを行う。
+3. ```mysql -h [RDSのエンドポイント] -P 3306 -u [RDSのユーザー名(デフォルトはadmin)] -p```を実行する。
+4. パスワードが求められるのでRDSインスタンスを作成するときに設定したパスワードを入力することで以下のように正常に接続していることを確認できる。
 
 ![スクリーンショット 2023-09-15 160902](https://github.com/Hidetaka-Konishi/Raise_AWS_4/assets/142459457/d3672e43-6fb2-4190-bcbd-66c980de316a)
 
