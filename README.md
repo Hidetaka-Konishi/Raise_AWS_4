@@ -33,4 +33,4 @@ Powershellで```ssh -i "~/Downloads/```を入力するが実行はまだしな�
 3. ```mysql -h [RDSのエンドポイント] -P 3306 -u [RDSのユーザー名(デフォルトはadmin)] -p```を実行する。
 4. パスワードが求められるのでRDSインスタンスを作成するときに設定したパスワードを入力することで以下のように接続していることを確認できる。
 
-![スクリーンショット 2023-12-01 174719](https://github.com/Hidetaka-Konishi/Raise_AWS_4/assets/142459457/5cc5528d-56f3-4660-8ebc-f2577f3b43e7)
+![](./image/mysql_connect.png)
